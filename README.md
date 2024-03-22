@@ -94,3 +94,19 @@ DECIMAL : 최대자릿수인(M), 소수점 이하 자릿수(D)로 지정하여 d
 SIGNED : 부호 있는 정수로 변환
 
 UNSIGNED : 부호 없는 정수로 변환
+
+## IF
+
+IF(조건문, 참일 때의 값, 거짓일 때의 값)
+
+SELECT IF(2 > 1, 'TRUE', 'FALSE') AS result
+
+## IFNULL
+
+IFNULL(column_name, value)
+
+SELECT IFNULL(column_name, '대체할 값') FROM [table_name]; 
+
+## ISNULL
+
+SELECT ISNULL(is_discount, 대체할 값) AS result
