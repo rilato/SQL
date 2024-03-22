@@ -110,3 +110,23 @@ SELECT IFNULL(column_name, '대체할 값') FROM [table_name];
 ## ISNULL
 
 SELECT ISNULL(is_discount, 대체할 값) AS result
+
+## ROUND, CEIL, FLOOR
+
+ROUND(값, 위치까지 반올림);
+
+ROUND(3.141592, 0) -- 3
+
+ROUND(3.141592, 1) -- 3.1
+
+CEIL(값, 위치까지 올림);
+
+CEIL(3.141592, 0) -- 3
+
+CEIL(3.141592, 1) -- 3.2
+
+FLOOR(값, 위치까지 내림);
+
+FLOOR(3.141592, 0) -- 3
+
+FLOOR(3.141592, 1) -- 3.1
