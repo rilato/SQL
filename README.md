@@ -2,6 +2,11 @@
 study SQL using MySQL
 
 ## DATE_FORMAT
+
+DATE_FORMAT(컬럼명, 'TYPE') AS 원하는 컬럼명
+
+Type
+
 ====== 연 ======
 
 Year
@@ -65,3 +70,27 @@ Tr (ㅅㄱ)
 %T : hh:mm:SS
 
 %r : hh:mm:ss AM,PM
+
+## CAST
+
+CAST(데이터 형식 또는 값 AS 'TYPE')
+
+Type
+
+BINARY : 이진수로 변환
+
+CHAR : 문자열로 변환 (varChar은 char로 사용 -> CAST(1000 as varchar(10))가 아닌 CAST(1000 as char(10)))
+
+NCHAR : nchar로 변환(char랑 비슷하지만, 국가별 문자 세트로 문자열 생성)
+
+DATE : yyyy-mm-dd의 date로 변환
+
+DATETIME : yyy-mm-dd hh:mm:ss 의 datetime으로 변환
+
+TIME : hh:mm:ss 의 datetime으로 변환
+
+DECIMAL : 최대자릿수인(M), 소수점 이하 자릿수(D)로 지정하여 decimal로 변환
+
+SIGNED : 부호 있는 정수로 변환
+
+UNSIGNED : 부호 없는 정수로 변환
