@@ -1,0 +1,21 @@
+-- DATE로 되어있는 날짜에서 월(문자)만 빼와, CAST를 사용하여 문자 타입의 TIME을 숫자 타입으로 변환
+-- 다른 사람의 풀이 1
+SELECT 
+    COUNT(DATE_FORMAT(TIME, '%c')) as FISH_COUNT,
+    CAST(DATE_FORMAT(TIME, '%c') as UNSIGNED) as MONTH
+FROM FISH_INFO
+GROUP BY MONTH
+ORDER BY MONTH ASC;
+
+
+
+-- 다른 사람의 풀이2
+SELECT
+    COUNT(ID) AS FISH_COUNT
+    , MONTH(TIME) AS MONTH 
+FROM
+    FISH_INFO
+GROUP BY
+    MONTH
+ORDER BY
+    MONTH
