@@ -1,0 +1,14 @@
+-- 코드를 입력하세요
+-- 아래의 코드를 LEFT OUTER JOIN할 경우,
+-- I.ANIMAL_ID, I.ANIMAL_TYPE, ... ,I.SEX_UPON_INTAKE, O.ANIMAL_ID, O.ANIMAL_TYPE, ..., O.SEX_UPON_INTAKE
+-- 와 같은 컬럼이 형성된다. 이 때, LEFT에 있는 ANIMAL_INS와 관련된 정보는 모두 선택되고,
+-- RIGHT에 있는 ANIMAL_OUTS에서는 외래키인 ANIMAL_ID가 없는 경우, NULL로 설정된다.
+-- 따라서 O.ANIMAL_ID 가 NULL인 경우, IN에는 있지만 OUT에는 없는, 즉, 입양 가지 않은 동물들을 의미한다.
+
+SELECT I.NAME, I.DATETIME
+FROM ANIMAL_INS I
+    LEFT OUTER JOIN ANIMAL_OUTS O
+    ON I.ANIMAL_ID = O.ANIMAL_ID
+WHERE O.ANIMAL_ID IS NULL
+ORDER BY I.DATETIME ASC
+LIMIT 3;
