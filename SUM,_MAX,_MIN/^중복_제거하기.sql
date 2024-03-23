@@ -1,0 +1,6 @@
+-- 코드를 입력하세요
+-- 중복 제거를 위해 DISTINCT를 사용한다.
+
+SELECT COUNT(DISTINCT NAME) AS count
+FROM ANIMAL_INS
+WHERE NAME IS NOT NULL;
