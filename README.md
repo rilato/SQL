@@ -71,6 +71,14 @@ Tr (ㅅㄱ, Time)
 
 %r : hh:mm:ss AM,PM
 
+## DATEDIFF
+
+일차이 : DATEDIFF(DAY, '2021-06-12', '2021-07-13')
+
+월차이 : DATEDIFF(MONTH, '2021-06-12', '2021-07-13')
+
+연차이 : DATEDIFF(YEAR, '2021-06-12', '2021-07-13')
+
 ## CAST
 
 CAST(데이터 형식 또는 값 AS 'TYPE')
