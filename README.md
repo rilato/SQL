@@ -136,3 +136,9 @@ FLOOR(3.141592, 1) -- 3.1
 CONCAT으로 합쳐진 것은 "문자열"로 됨. 정렬 시 주의!!
 
 CONCAT(값, 값);
+
+## 집계 함수
+
+아래와 같은 함수가 있으며, 이를 사용하기 위해서는 GROUP BY를 해주어야 한다.
+
+AVG(), MIN(), MAX(), COUNT(), COUNT(DISTINCT) : 중복되는 것 한 개만 인정, STDEV() : 표준편차, VAR_SAMP() : 분산
