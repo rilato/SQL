@@ -1,0 +1,6 @@
+-- 코드를 입력하세요
+-- No name 대소문자 스펠링 주의
+
+SELECT ANIMAL_TYPE, IFNULL(NAME, 'No name') AS NAME, SEX_UPON_INTAKE
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID ASC;
