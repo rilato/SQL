@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+-- 가격대 별(만 원 단위)로 끊기 위해, PRICE를 10000으로 나눈 후 FLOOR 처리 후 10000을 곱한다.
+
+SELECT (FLOOR(PRICE/10000))*10000 AS PRICE_GROUP, COUNT(*)
+FROM PRODUCT
+GROUP BY PRICE_GROUP
+ORDER BY 1 ASC;
