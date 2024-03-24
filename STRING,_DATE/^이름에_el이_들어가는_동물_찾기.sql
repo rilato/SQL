@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+-- 할머니가 기르던 '개'
+
+SELECT ANIMAL_ID, NAME
+FROM ANIMAL_INS
+WHERE NAME LIKE '%EL%' AND ANIMAL_TYPE = 'Dog'
+ORDER BY NAME ASC;
