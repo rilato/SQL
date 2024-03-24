@@ -150,3 +150,23 @@ CONCAT(값, 값);
 아래와 같은 함수가 있으며, 이를 사용하기 위해서는 GROUP BY를 해주어야 한다.
 
 AVG(), MIN(), MAX(), COUNT(), COUNT(DISTINCT) : 중복되는 것 한 개만 인정, STDEV() : 표준편차, VAR_SAMP() : 분산
+
+## RANK
+
+RANK 함수는 중복 값들에 대해서 동일 순위로 표시하고, 중복 순위 다음 값에 대해서는 중복 개수만큼 떨어진 순위로 출력하도록 하는 함수
+
+EX) 1, 1, 1, 4, 5, 6 ...
+
+SELECT RANK() OVER (ORDER BY 등수매길컬럼 정렬기준ASC/DESC) RANK AS 별칭 FROM 테이블;
+
+DENSE_RANK 함수는 중복 값들에 대해서 동일 순위로 표시하고, 중복 순위 다음 값에 대해서는 중복 값 개수와 상관없이 순차적인 순위 값을 출력하도록 하는 함수
+
+EX) 1, 1, 1, 2, 3, 4 ...
+
+SELECT DENSE_RANK() OVER (ORDER BY 등수매길컬럼 정렬기준ASC/DESC) DENSE_RANK AS 별칭 FROM 테이블;
+
+ROW_NUMBER 함수는 중복 값들에 대해서도 순차적인 순위를 표시하도록 출력하는 함수
+
+EX) 1, 1, 1, 2, 3, 4 ... => ROW_NUMBER 적용 시, 같은 1끼리도 순차 적용 => 1, 2, 3, 4, 5, 6 ...
+
+SELECT ROW_NUMBER() OVER (ORDER BY 등수매길컬럼 정렬기준ASC/DESC) ROW_NUMBER AS 별칭 FROM 테이블;
