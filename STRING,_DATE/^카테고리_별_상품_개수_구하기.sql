@@ -1,0 +1,9 @@
+-- 코드를 입력하세요
+-- 문자열을 자르는 SUBSTRING 함수에 대해 익힌다.
+-- SUBSTRING(문자열, 시작 위치, 길이)
+-- cf) 시작 위치는 1부터 시작한다!
+
+SELECT SUBSTRING(PRODUCT_CODE, 1, 2) AS CATEGORY, COUNT(PRODUCT_CODE) AS PRODUCTS
+FROM PRODUCT
+GROUP BY CATEGORY
+ORDER BY 1 ASC;
