@@ -1,4 +1,7 @@
 -- 코드를 입력하세요
+-- 8월부터 10월까지 group화 / 대여 횟수가 5회 이상인 car group화가 필요
+-- => 대여 횟수가 5회 이상인 car를 group화 하여 IN 절에 넣고, MAIN QUERY에서 둘 다 그룹화한다.
+
 -- SUBQUERY에서 CAR_ID의 집합을 뽑는다.
 -- MAIN QUERY에서 GROUP BY를 두 개 사용하여 결과를 만들어낸다.
 -- MONTH(START_DATE) BETWEEN 8 AND 10 조건은 MAIN QUERY, SUB QUERY 둘 다 사용된다.
