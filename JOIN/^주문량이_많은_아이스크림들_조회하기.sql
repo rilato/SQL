@@ -1,10 +1,10 @@
 -- 코드를 입력하세요
--- 두 개의 값을 더하기 위해, 각각의 SUM을 구하고 +를 사용한다.
+-- JULY 테이블은 FLAVOR가 중복되어 나타날 수 있다. 이를 계산해주어야 한다.
 
 SELECT F.FLAVOR
 FROM FIRST_HALF F
     JOIN JULY J
     ON F.FLAVOR = J.FLAVOR
-GROUP BY FLAVOR
-ORDER BY SUM(F.TOTAL_ORDER) + SUM(J.TOTAL_ORDER) DESC
+GROUP BY J.FLAVOR
+ORDER BY F.TOTAL_ORDER + SUM(J.TOTAL_ORDER) DESC
 LIMIT 3;
