@@ -1,6 +1,3 @@
--- 코드를 입력하세요
--- '.jpg'를 하드코딩했다.. FILE_EXT는 문제에 주어져있다!
-
 SELECT CONCAT('/home/grep/src/', F.BOARD_ID, '/', F.FILE_ID, F.FILE_NAME, F.FILE_EXT) AS FILE_PATH
 FROM USED_GOODS_BOARD B
     JOIN USED_GOODS_FILE F
