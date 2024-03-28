@@ -77,6 +77,8 @@ Tr (ㅅㄱ, Time)
 
 즉, 시간과 관련한 것이 껴있으면 안됨
 
+String, Date 디렉토리의 "자동차 대여 기록에서 장기/단기 대여 구분하기" 문제처럼, 기간 계산에 주의하기!!
+
 DATEDIFF(ENDDATE, STARTDATE)
 
 ## CAST
