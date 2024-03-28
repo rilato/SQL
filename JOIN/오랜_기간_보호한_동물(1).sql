@@ -1,4 +1,3 @@
--- 코드를 입력하세요
 -- 아래의 코드를 LEFT OUTER JOIN할 경우,
 -- I.ANIMAL_ID, I.ANIMAL_TYPE, ... ,I.SEX_UPON_INTAKE, O.ANIMAL_ID, O.ANIMAL_TYPE, ..., O.SEX_UPON_INTAKE
 -- 와 같은 컬럼이 형성된다. 이 때, LEFT에 있는 ANIMAL_INS와 관련된 정보는 모두 선택되고,
