@@ -10,7 +10,7 @@ WHERE R.MEMBER_ID IN (SELECT MEMBER_ID
                       -- SELECT *을 하는 이유는, FROM절에 사용될 애를 추출하는 것이므로, 전체 컬럼을 뽑아야 한다.
                     FROM (SELECT *, RANK() OVER (ORDER BY COUNT(*) DESC) AS REVIEW_RANK
                           FROM REST_REVIEW 
-                          -- INLINE은 FROM절 내부의 SUBQUERY에 대한 별칭
+                          -- INLINE은 FROM절 내부의 SUBQUERY에 대한 별칭 (별칭 꼭 붙여주기 !!)
                           GROUP BY MEMBER_ID) AS INLINE
                     WHERE REVIEW_RANK = 1
                    )
