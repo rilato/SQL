@@ -1,4 +1,3 @@
--- 코드를 작성해주세요
 -- 연도별 최대 값을 구하는 SUBQUERY를 SELECT절에 넣어준다
 
 SELECT YEAR(DIFFERENTIATION_DATE) AS YEAR,
