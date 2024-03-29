@@ -1,4 +1,3 @@
--- 코드를 입력하세요
 -- 10월에 빌리기 시작한 세단을 모두 뽑고, DISTINCT를 적용하여 정답을 골라낸다.
 
 SELECT DISTINCT C.CAR_ID
@@ -6,4 +5,14 @@ FROM CAR_RENTAL_COMPANY_CAR C
     JOIN CAR_RENTAL_COMPANY_RENTAL_HISTORY H
     ON C.CAR_ID = H.CAR_ID
 WHERE C.CAR_TYPE = '세단' AND MONTH(H.START_DATE) = 10
+ORDER BY 1 DESC;
+
+
+-- 다른 풀이
+
+SELECT CAR_ID
+FROM CAR_RENTAL_COMPANY_CAR
+WHERE CAR_TYPE = '세단' AND CAR_ID IN (SELECT CAR_ID
+                                       FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+                                       WHERE MONTH(START_DATE) = 10)
 ORDER BY 1 DESC;
