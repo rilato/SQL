@@ -1,5 +1,5 @@
 -- 년, 월 별로 출력 : GROUP BY YEAR, MONTH
--- 상품을 구매한 회원 수는 DISTINCT를 사용하여 구할 수 있다. (GROUP BY 사용하지 않음)
+-- 상품을 구매한 회원 수는 DISTINCT를 사용하여 구할 수 있다. (JOIN할 때에 ONLINE_SALE 테이블 때문에, 동일한 USER_ID가 여러 개 생기므로, DISTINCT를 반드시 해주어야 한다!!)
 -- ROUND에서 SUBQUERY를 사용하는 이유는, JOIN된 애들만 걸러진 테이블이므로, 2021년에 가입했지만, 상품을 구매하지 않은 사람의 수를 확인할 수 없다.
 
 SELECT YEAR(O.SALES_DATE) AS YEAR
