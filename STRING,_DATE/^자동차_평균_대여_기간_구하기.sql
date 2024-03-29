@@ -1,5 +1,5 @@
--- 코드를 입력하세요
 -- SELECT문에서 변수 명을 설정하고, WHERE절에서 이를 갖다 쓴다.
+-- DATEDIFF값에 1을 더하는 이유는, 당일날 빌려가서 당일날 반납해도 1일로 쳐주기 때문이다.
 
 SELECT CAR_ID,
        ROUND(AVG(DATEDIFF(DATE_FORMAT(END_DATE, '%Y-%m-%d'), DATE_FORMAT(START_DATE, '%Y-%m-%d')) + 1),1) AS AVERAGE_DURATION
