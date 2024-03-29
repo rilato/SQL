@@ -1,4 +1,3 @@
--- 코드를 입력하세요
 -- 할머니가 기르던 '개'
 
 SELECT ANIMAL_ID, NAME
