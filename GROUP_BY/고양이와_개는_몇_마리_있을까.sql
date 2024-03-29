@@ -1,4 +1,3 @@
--- 코드를 입력하세요
 -- UNION을 통해, 같은 컬럼 내에서 여러 종류의 COUNT를 종합하는 방법을 익힌다.
 
 -- 맞은 풀이
@@ -8,6 +7,13 @@ FROM ANIMAL_INS
 GROUP BY ANIMAL_TYPE
 ORDER BY ANIMAL_TYPE ASC;
 
+-- 또 다른 풀이
+
+SELECT ANIMAL_TYPE, COUNT(ANIMAL_TYPE) AS count
+FROM ANIMAL_INS
+GROUP BY ANIMAL_TYPE
+HAVING ANIMAL_TYPE = 'Cat' OR ANIMAL_TYPE = 'Dog'
+ORDER BY 1 ASC;
 
 -- 또 다른 풀이
 
