@@ -1,5 +1,5 @@
--- 코드를 입력하세요
 -- 09:00부터 19:59까지라는 조건에 맞게 HAVING절을 설정한다
+-- WHERE절에서 오류가 나는 경우, HAVING절을 고려해본다.
 
 SELECT HOUR(DATETIME) AS HOUR, COUNT(*) AS COUNT
 FROM ANIMAL_OUTS
