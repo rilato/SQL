@@ -77,9 +77,27 @@ Tr (ㅅㄱ, Time)
 
 즉, 시간과 관련한 것이 껴있으면 안됨
 
-String, Date 디렉토리의 "자동차 대여 기록에서 장기/단기 대여 구분하기" 문제처럼, 기간 계산에 주의하기!!
+String, Date 디렉토리의 "자동차 대여 기록에서 장기/단기 대여 구분하기" 문제처럼, 기간 계산에 주의하기!! DATEDIFF(ENDDATE - STARTDATE) + 1해야 하는 경우가 많음
 
 DATEDIFF(ENDDATE, STARTDATE)
+
+## ROUND, CEIL, FLOOR
+
+ROUND(값, 위치까지 반올림);
+
+ROUND(3.141592, 0) -- 3
+
+ROUND(3.141592, 1) -- 3.1
+
+CEIL과 FLOOR는 ROUND 함수와는 다르게, 매개 값을 받아 올림 / 버림할 자릿수를 정할 수는 없다.
+
+CEIL(값);
+
+CEIL(3.141592) -- 4
+
+FLOOR(값);
+
+FLOOR(3.141592) -- 3
 
 ## CAST
 
@@ -120,24 +138,6 @@ SELECT IFNULL(column_name, '대체할 값') FROM [table_name];
 ## ISNULL
 
 SELECT ISNULL(is_discount, 대체할 값) AS result
-
-## ROUND, CEIL, FLOOR
-
-ROUND(값, 위치까지 반올림);
-
-ROUND(3.141592, 0) -- 3
-
-ROUND(3.141592, 1) -- 3.1
-
-CEIL과 FLOOR는 ROUND 함수와는 다르게, 매개 값을 받아 올림 / 버림할 자릿수를 정할 수는 없다.
-
-CEIL(값);
-
-CEIL(3.141592) -- 4
-
-FLOOR(값);
-
-FLOOR(3.141592) -- 3
 
 ## CONCAT
 
